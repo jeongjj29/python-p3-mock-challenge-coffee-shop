@@ -53,8 +53,7 @@ class Customer:
         return list(set([order.coffee for order in self.orders()]))
 
     def create_order(self, coffee, price):
-        new_order = Order(self, coffee, price)
-        return new_order
+        return Order(self, coffee, price)
 
     @classmethod
     def most_aficionado(cls, coffee):
